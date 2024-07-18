@@ -18,7 +18,7 @@ resource "google_compute_instance" "apache" {
     #!/bin/bash
     apt-get update
     apt-get install -y apache2
-    echo "Welcome to DevOps World from ${var.environment}" > /var/www/html/index.html
+    echo "Welcome to DevOps Sukrit World from ${var.environment}" > /var/www/html/index.html
     systemctl restart apache2
   SCRIPT
 
