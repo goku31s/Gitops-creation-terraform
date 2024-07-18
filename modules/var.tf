@@ -10,7 +10,4 @@ variable "backend_bucket" {
   description = "Name of the Google Cloud Storage bucket to store Terraform state"
 }
 
-variable "environment" {
-  description = "Environment name ('dev' or 'prod')"
-}
 
