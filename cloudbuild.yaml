@@ -8,9 +8,9 @@ steps:
   - '-c'
   - |
       if [ "$BRANCH_NAME" = "dev" ]; then
-        cd EnvironmentCreation/dev
+        cd $BRANCH_NAME/EnvironmentCreation/dev
       elif [ "$BRANCH_NAME" = "prod" ]; then
-        cd EnvironmentCreation/prod
+        cd $BRANCH_NAME/EnvironmentCreation/prod
       fi
       terraform init
 
@@ -21,9 +21,9 @@ steps:
   - '-c'
   - |
       if [ "$BRANCH_NAME" = "dev" ]; then
-        cd EnvironmentCreation/dev
+        cd $BRANCH_NAME/EnvironmentCreation/dev
       elif [ "$BRANCH_NAME" = "prod" ]; then
-        cd EnvironmentCreation/prod
+        cd $BRANCH_NAME/EnvironmentCreation/prod
       fi
       terraform plan
 
@@ -34,8 +34,8 @@ steps:
   - '-c'
   - |
       if [ "$BRANCH_NAME" = "dev" ]; then
-        cd EnvironmentCreation/dev
+        cd $BRANCH_NAME/EnvironmentCreation/dev
       elif [ "$BRANCH_NAME" = "prod" ]; then
-        cd EnvironmentCreation/prod
+        cd $BRANCH_NAME/EnvironmentCreation/prod
       fi
       terraform apply -auto-approve
